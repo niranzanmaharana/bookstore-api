@@ -5,7 +5,6 @@ package org.niranzan.bookstore.entity;
 
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,6 +31,6 @@ public class BookCategory {
 	@Column(name = "category_name")
 	private String categoryName;
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
+	@OneToMany(mappedBy = "category")
 	private Set<Book> books;
 }
