@@ -28,5 +28,8 @@ public class RestRepositoryConfig implements RepositoryRestConfigurer {
 				entityManager.getMetamodel().getEntities().stream()
 				.map(Type::getJavaType)
 				.toArray(Class[]::new));
+
+		cors.addMapping("/**")
+			.allowedOrigins("http://localhost:4200");
 	}
 }
