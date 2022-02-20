@@ -30,6 +30,6 @@ public class RestRepositoryConfig implements RepositoryRestConfigurer {
 				.toArray(Class[]::new));
 
 		cors.addMapping("/**")
-			.allowedOrigins("http://localhost:4200");
+			.allowedOrigins("http://localhost:4200", "http://localhost:3030");
 	}
 }
